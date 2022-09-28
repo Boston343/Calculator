@@ -1,0 +1,24 @@
+{
+    "name": "calculator",
+    "version": "1.0.0",
+    "description": "Express.js basic calculator app. Used while learning Express.js.",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Boston343/Calculator.git"
+    },
+    "author": "Reap3r",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Boston343/Calculator/issues"
+    },
+    "homepage": "https://github.com/Boston343/Calculator#readme",
+    "dependencies": {
+        "express": "^4.18.1"
+    }
+}
