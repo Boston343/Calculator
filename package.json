@@ -19,6 +19,7 @@
     },
     "homepage": "https://github.com/Boston343/Calculator#readme",
     "dependencies": {
+        "body-parser": "^1.20.0",
         "express": "^4.18.1"
     }
 }

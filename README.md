@@ -1,7 +1,9 @@
 # Calculator
 Express.js basic calculator app. Used while learning Express.js.
 
-This is dependent upon Express.js. Inside project run `npm install express`
+This is dependent upon:
+- Express.js. Inside project run `npm install express`
+- Body Parser. Inside project run `npm install body-parser`
 
 ---- the rest of this is a template and not yet updated ----
 
