@@ -55,11 +55,11 @@ app.post('/', function(req, res) {
 // BMI Calculator
 app.post('/bmicalculator', function(req, res) {
     console.log(req.body);
-    var height = Number(req.body.height);
-    var weight = Number(req.body.weight);
-    var result = (weight / (height**2)) * 703;
-    console.log("Result: " + result);
-    res.send("Your BMI is: " + result);
+    var height = parseFloat(req.body.height);
+    var weight = parseFloat(req.body.weight);
+    var bmi = (weight / (height**2)) * 703;
+    console.log("Result: " + bmi);
+    res.send("Your BMI is: " + bmi);
 });
 
 // -------------------------------------------------------------
