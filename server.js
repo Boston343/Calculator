@@ -12,8 +12,10 @@ app.use(bodyParser.urlencoded({extended: true})); // this is for parsing data fr
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// ----------------------------------------------------------------------------------------------------------
-// Get requests
+// -------------------------------------------------------------
+// --------------------- Get Requests --------------------------
+// -------------------------------------------------------------
+// Normal Calculator
 app.get('/', function(req, res) {
     var fileName = "index.html";
     var options = {
@@ -30,8 +32,17 @@ app.get('/', function(req, res) {
     // console.log(req);
 });
 
-// ----------------------------------------------------------------------------------------------------------
-// Post requests
+// BMI Calculator
+app.get('/bmicalculator', function(req, res) {
+    var fileName = "bmiCalculator.html";
+    res.sendFile(path.join(__dirname, "\\" + fileName));
+    console.log('Sent:', __dirname + "\\" + fileName);
+});
+
+// -------------------------------------------------------------
+// -------------------- Post Requests --------------------------
+// -------------------------------------------------------------
+// Normal Calculator
 app.post('/', function(req, res) {
     console.log(req.body);
     var num1 = Number(req.body.num1);
@@ -41,8 +52,19 @@ app.post('/', function(req, res) {
     res.send("The result of the calculation is: " + result);
 });
 
-// ----------------------------------------------------------------------------------------------------------
-// Listening
+// BMI Calculator
+app.post('/bmicalculator', function(req, res) {
+    console.log(req.body);
+    var height = Number(req.body.height);
+    var weight = Number(req.body.weight);
+    var result = (weight / (height**2)) * 703;
+    console.log("Result: " + result);
+    res.send("Your BMI is: " + result);
+});
+
+// -------------------------------------------------------------
+// ---------------------- Listening ----------------------------
+// -------------------------------------------------------------
 app.listen(port, () => {
     console.log(`Example app listening on port ${port} at \"localhost:${port}\"`);
 });

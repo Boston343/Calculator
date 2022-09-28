@@ -1,22 +1,17 @@
 # Calculator
-Express.js basic calculator app. Used while learning Express.js.
+Express.js basic calculator app. Used while learning Express.js. There is a normal calculator that opens at `localhost:3000`, and a BMI calculator that opens at `localhost:3000\bmicalculator`
 
 This is dependent upon:
 - Express.js. Inside project run `npm install express`
 - Body Parser. Inside project run `npm install body-parser`
 
----- the rest of this is a template and not yet updated ----
-
-Website can be viewed here: https://boston343.github.io/Drum-Kit/ 
-
 ## Includes
-- Javascript DOM (Document Object Model) manipulation
-  - querySelectorAll
-  - addEventListener
-  - playing audio
-  - adding and removing classes
-  - setTimeout to delay functions
-- SASS
-  - variables
-  - separate files
-  - google fonts
+- JS includes
+  - express
+  - body-parser
+  - path
+  - url
+- Data retreival and manipulation
+  - Serving up HTML files
+  - Retreive data from form, manipulate, and respond to user
+  - Minimal error handling
